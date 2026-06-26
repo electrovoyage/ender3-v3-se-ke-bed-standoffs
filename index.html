@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Creality Ender 3 v3 SE/KE levelling standoff generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    </head>
+    <body>
+        <div class="side-by-side">
+            <div>
+                <h1>Standoff Generator</h1>
+                <p>Fully client-side Ender 3 v3 SE/KE standoff generator, in the browser. Powered by OpenSCAD.
+                    <br><br>Input the corner values of your levelling data
+                     into the grid on the right and click Generate!</p>
+                <label for="resolution">Resolution (higher = smoother; low resolutions will also slice as circles):</label>
+                <input class="resolution-field" id="resolution" type="number" min="4", max="128", step="1" value="64">
+                <br><br>
+                <button class="generate">Generate!</button>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: center;">
+                    <div class="levelling-grid">
+
+                    </div>
+                </div>
+                <p style="width: 100%; text-align: center;;">Front</p>
+            </div>
+        </div>
+
+        <h2>What is this for?</h2>
+        <p>Some users of Creality Ender 3 v3 SE and Ender 3 v3 KE FDM 3D printers encounter issues with bed levelling 
+            with some of the corners being off. This tool helps you correct for that.
+        </p>
+        <h2>How do I print these?</h2>
+        <p>The standoffs should be printed with the smallest layer height your printer can manage 
+            with the installed nozzle and in a filament that can withstand the bed temperatures, like ASA.</p>
+
+        <script type="module" src="main.js" async defer></script>
+    </body>
+</html>
