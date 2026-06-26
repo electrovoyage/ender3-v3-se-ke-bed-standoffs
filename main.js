@@ -44,7 +44,7 @@ async function createStandoff(right, front, levelling_offset, resolution, number
     `);
 
     // Run like a command-line program with arguments
-    instance.callMain(["/input.scad", "--enable=manifold", "-o", filename]); // manifold is faster at rendering
+    instance.callMain(["/input.scad", "-o", filename]); // manifold is faster at rendering
 
     // Read the output 3D-model into a JS byte-array
     const output = instance.FS.readFile("/"+filename);
